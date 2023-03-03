@@ -24,7 +24,7 @@ Note that the scripts for each of the spec miners will automatically run `obtain
 
 ## Running BDDMiner
 
-BDDMiner mines specifications that match a given regular expression. In the script below, I have BDDMiner produce specifications for "(ab*c)*", "(a+b*c+)?", and "(a+b*c+)*".
+BDDMiner mines specifications that match a given regular expression. In the script below, I have BDDMiner produce specifications for `(ab*c)*`, `(a+b*c+)?`, and `(a+b*c+)*`.
 
 To run BDDMiner:
 ```
