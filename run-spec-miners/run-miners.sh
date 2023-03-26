@@ -4,7 +4,7 @@ if [ $# -ne 1 ]; then
 fi
 
 rm -rf ./text-files/*
-
+mkdir ./text-files/
 exec < $1
 read header
 while read line
