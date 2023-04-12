@@ -1,0 +1,72 @@
+AVG length: 85.0
+Train method distributions: Counter({'write([B)V': 28, 'closeCurrentEntry()V': 16, 'pad()V': 12, 'putNextEntry(Lorg/kamranzafar/jtar/TarEntry;)V': 11, 'write([BII)V': 6, 'flush()V': 6, 'close()V': 4, '<START>': 1, '<END>': 1})
+Max. possible pairs of methods: 72
+Min. Frequency: 5
+Covered pairs: 14
+Selected data:  1
+reading text file
+Process Process-1:
+Traceback (most recent call last):
+  File "/home/kaet/conda/envs/dsm/lib/python3.5/multiprocessing/process.py", line 252, in _bootstrap
+    self.run()
+  File "/home/kaet/conda/envs/dsm/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/kaet/gen/6156/spec-miners/run-spec-miners/DSM/train.py", line 16, in train
+    data_loader = TextLoader(args.data_dir, args.batch_size, args.seq_length)
+  File "/home/kaet/gen/6156/spec-miners/run-spec-miners/DSM/utils.py", line 27, in __init__
+    self.create_batches()
+  File "/home/kaet/gen/6156/spec-miners/run-spec-miners/DSM/utils.py", line 97, in create_batches
+    assert False, "Not enough data. Make seq_length and batch_size small."
+AssertionError: Not enough data. Make seq_length and batch_size small.
+Feature engineering
+/home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarOutputStream/work_dir/clustering_space
+Found 0 training trace files
+Parsed trace set: 0
+Training data: 0 from /home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarOutputStream/work_dir/features4clustering
+Validating: 1 data from /home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarOutputStream/input_traces/input.txt
+WARNING: number of clusters must be < number of instances! 2 0
+WARNING: number of clusters must be < number of instances! 2 0
+WARNING: number of clusters must be < number of instances! 3 0
+WARNING: number of clusters must be < number of instances! 3 0
+WARNING: number of clusters must be < number of instances! 4 0
+WARNING: number of clusters must be < number of instances! 4 0
+WARNING: number of clusters must be < number of instances! 5 0
+WARNING: number of clusters must be < number of instances! 5 0
+WARNING: number of clusters must be < number of instances! 6 0
+WARNING: number of clusters must be < number of instances! 6 0
+WARNING: number of clusters must be < number of instances! 7 0
+WARNING: number of clusters must be < number of instances! 7 0
+WARNING: number of clusters must be < number of instances! 8 0
+WARNING: number of clusters must be < number of instances! 8 0
+WARNING: number of clusters must be < number of instances! 9 0
+WARNING: number of clusters must be < number of instances! 9 0
+WARNING: number of clusters must be < number of instances! 10 0
+WARNING: number of clusters must be < number of instances! 10 0
+WARNING: number of clusters must be < number of instances! 11 0
+WARNING: number of clusters must be < number of instances! 11 0
+WARNING: number of clusters must be < number of instances! 12 0
+WARNING: number of clusters must be < number of instances! 12 0
+WARNING: number of clusters must be < number of instances! 13 0
+WARNING: number of clusters must be < number of instances! 13 0
+WARNING: number of clusters must be < number of instances! 14 0
+WARNING: number of clusters must be < number of instances! 14 0
+WARNING: number of clusters must be < number of instances! 15 0
+WARNING: number of clusters must be < number of instances! 15 0
+WARNING: number of clusters must be < number of instances! 16 0
+WARNING: number of clusters must be < number of instances! 16 0
+WARNING: number of clusters must be < number of instances! 17 0
+WARNING: number of clusters must be < number of instances! 17 0
+WARNING: number of clusters must be < number of instances! 18 0
+WARNING: number of clusters must be < number of instances! 18 0
+WARNING: number of clusters must be < number of instances! 19 0
+WARNING: number of clusters must be < number of instances! 19 0
+Traceback (most recent call last):
+  File "/home/kaet/gen/6156/spec-miners/run-spec-miners/DSM/DSM.py", line 142, in <module>
+    final_file=model_selection.selecting_model(input_option)
+  File "/home/kaet/gen/6156/spec-miners/run-spec-miners/DSM/fsa_construction/estimate_accuracy.py", line 105, in selecting_model
+    best_fsm_folder =os.path.dirname(rankings[0][0])
+IndexError: list index out of range
+
+real	0m1.120s
+user	0m1.114s
+sys	0m1.861s

@@ -1,0 +1,1 @@
+<START> isValidJUnit4Test(Ljava/lang/Class;)Z checkforTestAnnotatedMethod(Ljava/lang/Class;)Z isValidJUnit4Test(Ljava/lang/Class;)Z checkforTestAnnotatedMethod(Ljava/lang/Class;)Z isValidJUnit4Test(Ljava/lang/Class;)Z checkforTestAnnotatedMethod(Ljava/lang/Class;)Z checkforTestAnnotatedMethod(Ljava/lang/Class;)Z <END>

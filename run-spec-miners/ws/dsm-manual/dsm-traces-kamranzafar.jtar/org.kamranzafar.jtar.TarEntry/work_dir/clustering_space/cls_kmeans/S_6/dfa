@@ -1,0 +1,29 @@
+digraph Automata {
+rankdir=LR
+size="8,5"
+	node [shape=star]
+	2
+	node [shape=doublecircle]
+	6
+	node [shape=circle]
+	2 -> 2 [label="writeEntryHeader([B)V"]
+	5 -> 3 [label="isDirectory()Z"]
+	3 -> 3 [label="getSize()J"]
+	1 -> 1 [label="getSize()J"]
+	0 -> 0 [label="isDirectory()Z"]
+	0 -> 0 [label="getName()Ljava/lang/String;"]
+	0 -> 6 [label=<END>]
+	2 -> 5 [label="computeCheckSum([B)J"]
+	0 -> 0 [label="computeCheckSum([B)J"]
+	3 -> 1 [label="extractTarHeader(Ljava/lang/String;)V"]
+	1 -> 4 [label="parseTarHeader([B)V"]
+	0 -> 0 [label="extractTarHeader(Ljava/lang/String;)V"]
+	0 -> 0 [label="parseTarHeader([B)V"]
+	1 -> 1 [label="extractTarHeader(Ljava/lang/String;)V"]
+	1 -> 1 [label="isDirectory()Z"]
+	0 -> 0 [label="getSize()J"]
+	1 -> 1 [label="computeCheckSum([B)J"]
+	0 -> 0 [label="writeEntryHeader([B)V"]
+	4 -> 0 [label="getName()Ljava/lang/String;"]
+	1 -> 1 [label="writeEntryHeader([B)V"]
+}

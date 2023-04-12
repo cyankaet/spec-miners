@@ -1,0 +1,1 @@
+<START> invokeAssertionStatusMethod(Ljava/lang/ClassLoader;Z)V <END>

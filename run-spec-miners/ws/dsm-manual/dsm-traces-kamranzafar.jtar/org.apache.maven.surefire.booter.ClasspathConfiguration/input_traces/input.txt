@@ -1,0 +1,1 @@
+<START> getTestClasspath()Lorg/apache/maven/surefire/booter/Classpath; getTestClasspath()Lorg/apache/maven/surefire/booter/Classpath; createSurefireClassLoader(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader; <END>

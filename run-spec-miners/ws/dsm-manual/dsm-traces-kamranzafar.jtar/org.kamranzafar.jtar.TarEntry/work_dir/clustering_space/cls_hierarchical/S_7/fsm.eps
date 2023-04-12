@@ -1,0 +1,753 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 2.40.1 (20161225.0304)
+%%Title: Automata
+%%Pages: 1
+%%BoundingBox: 36 36 612 141
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 612 141
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 576 105 boxprim clip newpath
+0.341052 0.341052 set_scale 0 rotate 109.556 109.556 translate
+% C0
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 130.4445 60.2657 moveto
+91.1444 60.2657 lineto
+79 97.6453 lineto
+66.8556 60.2657 lineto
+27.5555 60.2657 lineto
+59.35 37.1639 lineto
+47.2056 -.2157 lineto
+79 22.8861 lineto
+110.7944 -.2157 lineto
+98.65 37.1639 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+71 45.0148 moveto 16 (C0) alignedtext
+grestore
+% C0->C0
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 64.7617 60.5132 moveto
+43.8789 83.7661 48.625 115.4296 79 115.4296 curveto
+105.9341 115.4296 112.7169 90.5335 99.3485 68.6811 curveto
+stroke
+0 0 0 edgecolor
+newpath 102.0311 66.4241 moveto
+93.2383 60.5132 lineto
+96.4259 70.6172 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 102.0311 66.4241 moveto
+93.2383 60.5132 lineto
+96.4259 70.6172 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+0 119.2296 moveto 158 (writeEntryHeader\([B\)V) alignedtext
+grestore
+% C5
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+338.0199 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+330.0199 45.0148 moveto 16 (C5) alignedtext
+grestore
+% C0->C5
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 114.4725 48.7148 moveto
+165.3528 48.7148 258.2464 48.7148 306.7116 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 306.9082 52.2149 moveto
+316.9082 48.7148 lineto
+306.9081 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 306.9082 52.2149 moveto
+316.9082 48.7148 lineto
+306.9081 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+148.2218 52.5148 moveto 151 (computeCheckSum\([B\)J) alignedtext
+grestore
+% CEND
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1646.3469 48.7148 30.5892 30.5892 ellipse_path stroke
+1 setlinewidth
+0 0 0 nodecolor
+1646.3469 48.7148 34.5946 34.5946 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1630.8469 45.0148 moveto 31 (CEND) alignedtext
+grestore
+% C1
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1532.0015 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1524.0015 45.0148 moveto 16 (C1) alignedtext
+grestore
+% C1->CEND
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1552.9742 48.7148 moveto
+1566.5358 48.7148 1584.7139 48.7148 1601.4263 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 1601.5884 52.2149 moveto
+1611.5883 48.7148 lineto
+1601.5883 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1601.5884 52.2149 moveto
+1611.5883 48.7148 lineto
+1601.5883 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1570.7996 52.5148 moveto 23 (END) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1530.5311 69.4712 moveto
+1530.3707 79.1 1530.8608 87.5129 1532.0015 87.5129 curveto
+1532.6965 87.5129 1533.15 84.3889 1533.362 79.7694 curveto
+stroke
+0 0 0 edgecolor
+newpath 1536.8649 79.508 moveto
+1533.4718 69.4712 lineto
+1529.8653 79.4333 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1536.8649 79.508 moveto
+1533.4718 69.4712 lineto
+1529.8653 79.4333 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1494.0015 91.3129 moveto 76 (getSize\(\)J) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1529.4777 69.3915 moveto
+1528.3633 87.0003 1529.2046 105.5129 1532.0015 105.5129 curveto
+1534.2521 105.5129 1535.2364 93.5256 1534.9543 79.6679 curveto
+stroke
+0 0 0 edgecolor
+newpath 1538.4395 79.2368 moveto
+1534.5252 69.3915 lineto
+1531.4456 79.5289 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1538.4395 79.2368 moveto
+1534.5252 69.3915 lineto
+1531.4456 79.5289 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1460.5015 109.3129 moveto 143 (parseTarHeader\([B\)V) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1528.7715 69.3914 moveto
+1526.331 94.2827 1527.4077 123.5129 1532.0015 123.5129 curveto
+1535.9851 123.5129 1537.3238 101.5314 1536.0177 79.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 1539.4994 79.0885 moveto
+1535.2314 69.3914 lineto
+1532.5207 79.6336 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1539.4994 79.0885 moveto
+1535.2314 69.3914 lineto
+1532.5207 79.6336 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1479.0015 127.3129 moveto 106 (isDirectory\(\)Z) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1528.287 69.226 moveto
+1524.2945 101.0638 1525.5327 141.5129 1532.0015 141.5129 curveto
+1537.788 141.5129 1539.389 109.1461 1536.8046 79.5295 curveto
+stroke
+0 0 0 edgecolor
+newpath 1540.2474 78.8028 moveto
+1535.7159 69.226 lineto
+1533.2862 79.5384 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1540.2474 78.8028 moveto
+1535.7159 69.226 lineto
+1533.2862 79.5384 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1430.5015 145.3129 moveto 203 (getName\(\)Ljava/lang/String;) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1527.9266 69.1159 moveto
+1522.2642 107.6549 1523.6225 159.5129 1532.0015 159.5129 curveto
+1539.6603 159.5129 1541.4534 116.185 1537.3806 79.3055 curveto
+stroke
+0 0 0 edgecolor
+newpath 1540.8178 78.5906 moveto
+1536.0764 69.1159 lineto
+1533.8744 79.4794 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1540.8178 78.5906 moveto
+1536.0764 69.1159 lineto
+1533.8744 79.4794 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1456.5015 163.3129 moveto 151 (computeCheckSum\([B\)J) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1527.6005 69.3235 moveto
+1520.2454 114.387 1521.7124 177.5129 1532.0015 177.5129 curveto
+1541.547 177.5129 1543.4994 123.181 1537.8588 79.3455 curveto
+stroke
+0 0 0 edgecolor
+newpath 1541.3042 78.7163 moveto
+1536.4024 69.3235 lineto
+1534.3769 79.723 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1541.3042 78.7163 moveto
+1536.4024 69.3235 lineto
+1534.3769 79.723 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1393.0015 181.3129 moveto 278 (extractTarHeader\(Ljava/lang/String;\)V) alignedtext
+grestore
+% C1->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1527.4077 69.0716 moveto
+1518.2202 120.5847 1519.7515 195.5129 1532.0015 195.5129 curveto
+1543.4858 195.5129 1545.5494 129.6581 1538.1922 78.9807 curveto
+stroke
+0 0 0 edgecolor
+newpath 1541.6419 78.3872 moveto
+1536.5952 69.0716 lineto
+1534.731 79.5011 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1541.6419 78.3872 moveto
+1536.5952 69.0716 lineto
+1534.731 79.5011 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1453.0015 199.3129 moveto 158 (writeEntryHeader\([B\)V) alignedtext
+grestore
+% C2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1030.8088 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1022.8088 45.0148 moveto 16 (C2) alignedtext
+grestore
+% C2->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1026.7654 69.4712 moveto
+1026.3243 79.1 1027.6721 87.5129 1030.8088 87.5129 curveto
+1032.7203 87.5129 1033.9674 84.3889 1034.5503 79.7694 curveto
+stroke
+0 0 0 edgecolor
+newpath 1038.0576 79.5695 moveto
+1034.8523 69.4712 lineto
+1031.0606 79.3643 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1038.0576 79.5695 moveto
+1034.8523 69.4712 lineto
+1031.0606 79.3643 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+977.8088 91.3129 moveto 106 (isDirectory\(\)Z) alignedtext
+grestore
+% C2->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1024.0272 68.507 moveto
+1020.728 86.3745 1022.9885 105.5129 1030.8088 105.5129 curveto
+1037.1628 105.5129 1039.8465 92.8786 1038.8599 78.557 curveto
+stroke
+0 0 0 edgecolor
+newpath 1042.3162 77.9896 moveto
+1037.5905 68.507 lineto
+1035.3713 78.8668 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1042.3162 77.9896 moveto
+1037.5905 68.507 lineto
+1035.3713 78.8668 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+955.3088 109.3129 moveto 151 (computeCheckSum\([B\)J) alignedtext
+grestore
+% C2->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1022.3494 67.8731 moveto
+1015.0984 93.0775 1017.9182 123.5129 1030.8088 123.5129 curveto
+1042.0378 123.5129 1045.625 100.4184 1041.5704 77.8045 curveto
+stroke
+0 0 0 edgecolor
+newpath 1044.9361 76.8245 moveto
+1039.2683 67.8731 lineto
+1038.1169 78.4052 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1044.9361 76.8245 moveto
+1039.2683 67.8731 lineto
+1038.1169 78.4052 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+891.8088 127.3129 moveto 278 (extractTarHeader\(Ljava/lang/String;\)V) alignedtext
+grestore
+% C2->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1021.2466 67.3903 moveto
+1009.4886 99.4855 1012.676 141.5129 1030.8088 141.5129 curveto
+1047.1709 141.5129 1051.364 107.2932 1043.3882 77.029 curveto
+stroke
+0 0 0 edgecolor
+newpath 1046.6986 75.8881 moveto
+1040.3711 67.3903 lineto
+1040.0183 77.9793 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1046.6986 75.8881 moveto
+1040.3711 67.3903 lineto
+1040.0183 77.9793 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+951.8088 145.3129 moveto 158 (writeEntryHeader\([B\)V) alignedtext
+grestore
+% C2->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1020.4941 66.9742 moveto
+1003.8989 105.7028 1007.3372 159.5129 1030.8088 159.5129 curveto
+1052.3551 159.5129 1057.0199 114.1689 1044.8031 76.7715 curveto
+stroke
+0 0 0 edgecolor
+newpath 1047.916 75.1051 moveto
+1041.1235 66.9742 lineto
+1041.363 77.5663 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1047.916 75.1051 moveto
+1041.1235 66.9742 lineto
+1041.363 77.5663 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+992.8088 163.3129 moveto 76 (getSize\(\)J) alignedtext
+grestore
+% C4
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1251.4051 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1243.4051 45.0148 moveto 16 (C4) alignedtext
+grestore
+% C2->C4
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1051.9605 48.7148 moveto
+1090.9961 48.7148 1174.5261 48.7148 1220.1246 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 1220.3175 52.2149 moveto
+1230.3175 48.7148 lineto
+1220.3174 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1220.3175 52.2149 moveto
+1230.3175 48.7148 lineto
+1220.3174 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1069.607 52.5148 moveto 143 (parseTarHeader\([B\)V) alignedtext
+grestore
+% C4->C1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1272.4955 48.7148 moveto
+1321.4675 48.7148 1443.0881 48.7148 1500.7367 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 1501.0492 52.2149 moveto
+1511.0492 48.7148 lineto
+1501.0491 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1501.0492 52.2149 moveto
+1511.0492 48.7148 lineto
+1501.0491 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1290.2033 52.5148 moveto 203 (getName\(\)Ljava/lang/String;) alignedtext
+grestore
+% C3
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+675.2125 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+667.2125 45.0148 moveto 16 (C3) alignedtext
+grestore
+% C3->C2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 696.1291 48.7148 moveto
+756.0285 48.7148 928.4614 48.7148 999.5733 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 999.6949 52.2149 moveto
+1009.6949 48.7148 lineto
+999.6948 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 999.6949 52.2149 moveto
+1009.6949 48.7148 lineto
+999.6948 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+714.0107 52.5148 moveto 278 (extractTarHeader\(Ljava/lang/String;\)V) alignedtext
+grestore
+% C6
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+521.6162 48.7148 20.5982 20.5982 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+513.6162 45.0148 moveto 16 (C6) alignedtext
+grestore
+% C6->C3
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 542.6511 48.7148 moveto
+568.8153 48.7148 613.7148 48.7148 643.9218 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 643.9389 52.2149 moveto
+653.9388 48.7148 lineto
+643.9388 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 643.9389 52.2149 moveto
+653.9388 48.7148 lineto
+643.9388 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+560.4144 52.5148 moveto 76 (getSize\(\)J) alignedtext
+grestore
+% C5->C6
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 359.0807 48.7148 moveto
+391.314 48.7148 453.0713 48.7148 490.4849 48.7148 curveto
+stroke
+0 0 0 edgecolor
+newpath 490.801 52.2149 moveto
+500.801 48.7148 lineto
+490.801 45.2149 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 490.801 52.2149 moveto
+500.801 48.7148 lineto
+490.801 45.2149 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+376.8181 52.5148 moveto 106 (isDirectory\(\)Z) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

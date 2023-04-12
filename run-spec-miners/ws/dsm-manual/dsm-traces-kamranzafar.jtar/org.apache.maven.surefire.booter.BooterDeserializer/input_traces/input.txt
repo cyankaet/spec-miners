@@ -1,0 +1,1 @@
+<START> getProviderConfiguration()Lorg/apache/maven/surefire/booter/StartupConfiguration; <END>

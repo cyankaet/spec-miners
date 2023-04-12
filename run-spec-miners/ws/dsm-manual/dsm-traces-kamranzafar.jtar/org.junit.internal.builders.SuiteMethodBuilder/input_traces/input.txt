@@ -1,0 +1,1 @@
+<START> hasSuiteMethod(Ljava/lang/Class;)Z <END>
