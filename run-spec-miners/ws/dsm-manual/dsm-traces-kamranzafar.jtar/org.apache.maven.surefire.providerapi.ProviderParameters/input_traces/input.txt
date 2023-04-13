@@ -1,0 +1,1 @@
+<START> getScanResult()Lorg/apache/maven/surefire/util/ScanResult; getRunOrderCalculator()Lorg/apache/maven/surefire/util/RunOrderCalculator; getProviderProperties()Ljava/util/Properties; getTestRequest()Lorg/apache/maven/surefire/testset/TestRequest; getReporterFactory()Lorg/apache/maven/surefire/report/ReporterFactory; <END>

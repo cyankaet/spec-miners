@@ -1,0 +1,65 @@
+Avg. time per line: 0.08ms, 2350 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.08ms, 2089 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.14ms, 1828 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.24ms, 1567 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.25ms, 1306 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.21ms, 1045 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.19ms, 784 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.20ms, 523 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.18ms, 262 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0.22ms, 1 lines remaining.  ETA: 0h 0m 0s
+--------------------------------------------------------------------------------
+Mined 5 Specifications:
+--------------------------------------------------------------------------------
+Specification 1:
+(
+  org.apache.maven.surefire.util.DefaultScanResult.getClassName(I)Ljava/lang/String;
+  java.util.List.get(I)Ljava/lang/Object;
+  org.apache.maven.surefire.util.ScannerFilter.accept(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit3.JUnit3TestChecker.accept(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit3.JUnit3TestChecker.isValidJUnit3Test(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit3.JUnit3TestChecker.isSuiteOnly(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit4.JUnit4TestChecker.isValidJUnit4Test(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit4.JUnit4TestChecker.isRunWithPresentInClassLoader()Z
+  org.apache.maven.surefire.common.junit4.JUnit4TestChecker.lookForTestAnnotatedMethods(Ljava/lang/Class;)Z
+  org.apache.maven.surefire.common.junit4.JUnit4TestChecker.checkforTestAnnotatedMethod(Ljava/lang/Class;)Z
+  java.util.Set.add(Ljava/lang/Object;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 2:
+(
+  org.apache.maven.surefire.booter.ForkingRunListener.toPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuilder;B)V
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+  org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.encodeAndWriteToTarget(Ljava/lang/String;)V
+  java.io.PrintStream.write([BII)V
+  java.io.PrintStream.flush()V
+  java.io.PrintStream.checkError()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 3:
+(
+  java.util.Iterator.hasNext()Z
+  java.util.Iterator.next()Ljava/lang/Object;
+  java.util.Properties.getProperty(Ljava/lang/String;)Ljava/lang/String;
+  java.util.Map.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 4:
+(
+  org.apache.maven.surefire.booter.PropertiesWrapper.getProperty(Ljava/lang/String;)Ljava/lang/String;
+  java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 5:
+(
+  java.util.Map$Entry.getKey()Ljava/lang/Object;
+  java.util.Map$Entry.getValue()Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------

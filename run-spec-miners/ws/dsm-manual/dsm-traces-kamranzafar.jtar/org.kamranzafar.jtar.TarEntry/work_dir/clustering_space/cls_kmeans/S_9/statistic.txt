@@ -1,0 +1,7 @@
+FSM_size:	10
+DFA_size:	10
+MinDFA_size:	9
+DFA_validation:	1
+num_cluster:	9
+total_validation_traces:	1
+recall:	1.0

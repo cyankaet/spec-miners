@@ -1,0 +1,47 @@
+1
+C8
+1
+C11
+42
+C0	C0	computeCheckSum([B)J
+C0	C2	extractTarHeader(Ljava/lang/String;)V
+C6	C7	isDirectory()Z
+C2	C2	isDirectory()Z
+C8	C10	writeEntryHeader([B)V
+C9	C4	extractTarHeader(Ljava/lang/String;)V
+C2	C2	computeCheckSum([B)J
+C1	C1	getSize()J
+C3	C3	extractTarHeader(Ljava/lang/String;)V
+C2	C2	extractTarHeader(Ljava/lang/String;)V
+C3	C3	computeCheckSum([B)J
+C0	C0	isDirectory()Z
+C4	C4	computeCheckSum([B)J
+C5	C2	getName()Ljava/lang/String;
+C1	C1	getName()Ljava/lang/String;
+C3	C3	parseTarHeader([B)V
+C2	C2	parseTarHeader([B)V
+C4	C4	isDirectory()Z
+C1	C1	writeEntryHeader([B)V
+C10	C6	computeCheckSum([B)J
+C3	C3	writeEntryHeader([B)V
+C2	C2	getSize()J
+C1	C3	extractTarHeader(Ljava/lang/String;)V
+C0	C0	parseTarHeader([B)V
+C7	C9	getSize()J
+C4	C4	writeEntryHeader([B)V
+C4	C4	getSize()J
+C2	C1	getName()Ljava/lang/String;
+C0	C0	writeEntryHeader([B)V
+C1	C1	parseTarHeader([B)V
+C0	C1	getSize()J
+C2	C2	writeEntryHeader([B)V
+C3	C3	getSize()J
+C3	C11	<END>
+C4	C5	parseTarHeader([B)V
+C0	C1	getName()Ljava/lang/String;
+C3	C2	isDirectory()Z
+C1	C1	computeCheckSum([B)J
+C1	C11	<END>
+C1	C0	isDirectory()Z
+C3	C1	getName()Ljava/lang/String;
+C4	C4	extractTarHeader(Ljava/lang/String;)V

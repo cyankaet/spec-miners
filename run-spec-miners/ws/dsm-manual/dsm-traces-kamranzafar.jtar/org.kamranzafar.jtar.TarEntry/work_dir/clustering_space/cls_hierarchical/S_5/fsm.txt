@@ -1,0 +1,25 @@
+1
+C0
+1
+CEND
+20
+C0	C0	computeCheckSum([B)J
+C0	C1	isDirectory()Z
+C4	C3	getName()Ljava/lang/String;
+C2	C2	isDirectory()Z
+C3	C3	isDirectory()Z
+C0	C0	writeEntryHeader([B)V
+C2	C2	computeCheckSum([B)J
+C1	C1	getSize()J
+C3	C3	extractTarHeader(Ljava/lang/String;)V
+C3	CEND	<END>
+C2	C4	parseTarHeader([B)V
+C3	C3	computeCheckSum([B)J
+C2	C2	extractTarHeader(Ljava/lang/String;)V
+C3	C3	getName()Ljava/lang/String;
+C2	C2	writeEntryHeader([B)V
+C3	C3	getSize()J
+C3	C3	parseTarHeader([B)V
+C2	C2	getSize()J
+C1	C2	extractTarHeader(Ljava/lang/String;)V
+C3	C3	writeEntryHeader([B)V

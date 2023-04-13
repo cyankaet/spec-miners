@@ -1,0 +1,3 @@
+model_checkpoint_path: "/home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarEntry/saved_model/model.ckpt-9"
+all_model_checkpoint_paths: "/home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarEntry/saved_model/model.ckpt-0"
+all_model_checkpoint_paths: "/home/kaet/gen/6156/spec-miners/run-spec-miners/ws/dsm-manual/dsm-traces-kamranzafar.jtar/org.kamranzafar.jtar.TarEntry/saved_model/model.ckpt-9"
