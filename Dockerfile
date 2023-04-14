@@ -11,7 +11,7 @@ RUN \
 RUN \ 
   # Install python
   apt-get update && \
-  apt-get install -y python python-dev python-pip python-virtualenv && \
+  apt-get install -y python3.8 python-dev python-pip python-virtualenv && \
   rm -rf /var/lib/apt/lists/*
 # Install misc
 RUN \
@@ -35,13 +35,18 @@ RUN \
   rm apache-maven-3.9.1-bin.tar.gz
 
 RUN \
+  wget https://repo.anaconda.com/miniconda/Miniconda3-py38_23.1.0-1-Linux-x86_64.sh && \
+  chmod +x Miniconda3-py38_23.1.0-1-Linux-x86_64.sh && \
+  ./Miniconda3-py38_23.1.0-1-Linux-x86_64.sh -b
+
+RUN \
   # Set up the user's configurations
   tail -n +10 ~/.bashrc > ~/tmp-bashrc && \
   cp ~/tmp-bashrc ~/.bashrc && \
   echo 'JAVAHOME=/usr/lib/jvm/java-8-openjdk' >> ~/.bashrc && \
   echo 'export JAVA_HOME=${JAVAHOME}' >> ~/.bashrc && \
   echo 'export MAVEN_HOME=/usr/src/app/run-spec-miners/apache-maven' >> ~/.bashrc && \
-  echo 'export PATH=${MAVEN_HOME}/bin:${JAVAHOME}/bin:${PATH}' >> ~/.bashrc
+  echo 'export PATH=${MAVEN_HOME}/bin:${JAVAHOME}/bin:/root/miniconda3/bin:${PATH}' >> ~/.bashrc
 # RUN mvn clean install
 # RUN ./bddminer.sh kamranzafar.jtar.txt
 # WORKDIR /usr/src/app/run-spec-miners/
