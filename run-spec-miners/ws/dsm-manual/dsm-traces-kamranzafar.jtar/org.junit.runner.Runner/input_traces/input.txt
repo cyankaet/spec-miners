@@ -1,1 +1,0 @@
-<START> run(Lorg/junit/runner/notification/RunNotifier;)V <END>

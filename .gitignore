@@ -1,0 +1,3 @@
+shared/*/
+run-spec-miners/ws/*/
+*/__pycache__/*

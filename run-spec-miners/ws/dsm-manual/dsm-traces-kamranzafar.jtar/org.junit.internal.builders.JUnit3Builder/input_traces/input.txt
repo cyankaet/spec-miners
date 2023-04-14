@@ -1,1 +1,0 @@
-<START> isPre4Test(Ljava/lang/Class;)Z <END>

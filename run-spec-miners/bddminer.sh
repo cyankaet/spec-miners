@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ $# -ne 1 ]; then
     echo "USAGE: bash $0 PROJECTS_FILE"
     exit

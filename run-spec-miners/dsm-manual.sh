@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 CONDA_DIR=${HOME}/conda
 
 if [ $# -ne 1 ]; then

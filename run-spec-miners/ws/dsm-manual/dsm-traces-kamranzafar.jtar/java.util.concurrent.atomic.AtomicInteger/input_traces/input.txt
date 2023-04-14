@@ -1,1 +1,0 @@
-<START> getAndIncrement()I getAndIncrement()I getAndIncrement()I getAndIncrement()I getAndIncrement()I getAndIncrement()I getAndIncrement()I <END>

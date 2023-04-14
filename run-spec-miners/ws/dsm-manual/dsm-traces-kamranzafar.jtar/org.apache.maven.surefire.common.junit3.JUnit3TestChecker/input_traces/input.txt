@@ -1,1 +1,0 @@
-<START> isValidJUnit3Test(Ljava/lang/Class;)Z isSuiteOnly(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z isValidJUnit3Test(Ljava/lang/Class;)Z isSuiteOnly(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z isValidJUnit3Test(Ljava/lang/Class;)Z isSuiteOnly(Ljava/lang/Class;)Z <END>

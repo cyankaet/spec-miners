@@ -1,1 +1,0 @@
-<START> isManifestOnlyJarRequestedAndUsable()Z writeSurefireTestClasspathProperty()V getClasspathConfiguration()Lorg/apache/maven/surefire/booter/ClasspathConfiguration; getClasspathConfiguration()Lorg/apache/maven/surefire/booter/ClasspathConfiguration; getProviderClassName()Ljava/lang/String; <END>

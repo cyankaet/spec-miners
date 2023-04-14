@@ -1,1 +1,0 @@
-<START> accept(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z accept(Ljava/lang/Class;)Z <END>

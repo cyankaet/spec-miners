@@ -1,1 +1,0 @@
-<START> nextToken()Ljava/lang/String; hasMoreTokens()Z hasMoreTokens()Z nextToken()Ljava/lang/String; hasMoreTokens()Z hasMoreTokens()Z nextToken()Ljava/lang/String; hasMoreTokens()Z hasMoreTokens()Z nextToken()Ljava/lang/String; hasMoreTokens()Z <END>

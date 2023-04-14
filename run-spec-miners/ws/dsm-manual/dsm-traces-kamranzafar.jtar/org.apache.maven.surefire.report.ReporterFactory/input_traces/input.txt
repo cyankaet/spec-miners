@@ -1,1 +1,0 @@
-<START> close()Lorg/apache/maven/surefire/suite/RunResult; <END>
