@@ -34,4 +34,5 @@ while read url sha name; do
         cp -r traces ${out_dir}
     )
     echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
+    gunzip ${out_dir}/*.gz
 done < ${PROJECTS_FILE}
