@@ -35,4 +35,5 @@ while read url sha name; do
     )
     echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
     gunzip ${out_dir}/*.gz
+    # rm -rf ${WORKDIR}/${name} # new thing kate added to delete
 done < ${PROJECTS_FILE}
