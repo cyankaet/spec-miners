@@ -15,19 +15,20 @@ SKIPS=" -Dcheckstyle.skip -Drat.skip -Denforcer.skip -Danimal.sniffer.skip -Dmav
 
 # clone the project and checkout the correct sha
 while read url sha name; do
+    base_name=$(echo $name | tr -d '[:digit:]')
     out_dir=${TRACES_DIR}/${name}
     if [ -d ${out_dir} ]; then
         echo "[obtain-traces.sh] Traces from ${name} exist, skipping..."
         continue
     fi
-    if [ ! -d ${WORKDIR}/${name} ]; then
+    if [ ! -d ${WORKDIR}/${base_name} ]; then
         (
             cd ${WORKDIR}
-            git clone ${url} ${name}
+            git clone ${url} ${base_name}
         )
     fi
     (
-        cd ${WORKDIR}/${name}
+        cd ${WORKDIR}/${base_name}
         git checkout ${sha}
         # run methodtracer to obtain traces
         mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=all-tests@trace.include=*;instrument.include=*"
@@ -35,5 +36,5 @@ while read url sha name; do
     )
     echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
     gunzip ${out_dir}/*.gz
-    # rm -rf ${WORKDIR}/${name} # new thing kate added to delete
+    # rm -rf ${WORKDIR}/${base_name} # new thing kate added to delete
 done < ${PROJECTS_FILE}
