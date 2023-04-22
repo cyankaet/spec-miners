@@ -1,6 +1,3 @@
-[submodule "run-spec-miners/DSM"]
-	path = run-spec-miners/DSM
-	url = https://github.com/hvdthong/DSM.git
 [submodule "scripts/jtar"]
 	path = scripts/jtar
 	url = https://github.com/kamranzafar/jtar.git
