@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 # FROM openjdk:8
-COPY ./run-spec-miners /usr/src/app/run-spec-miners
+COPY . /usr/src/app
 WORKDIR /usr/src/app/run-spec-miners/
 
 RUN \
