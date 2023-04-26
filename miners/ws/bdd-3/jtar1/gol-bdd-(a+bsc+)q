@@ -1,0 +1,17 @@
+Warning: start and accepting states of pattern "(a+b*c+)?" overlap. This may cause a significant number of unintuitive matches against the empty string.  Consider using a "+"-closed version of the pattern instead.
+Warning: pattern "(a+b*c+)?" accepts at least one string [""] that does not contain all of its letters.  Consider rewriting the property to meet this constraint to avoid spurious matches.
+Avg. time per line: 0,26ms, 15593 lines remaining.  ETA: 0h 0m 4s
+Avg. time per line: 0,14ms, 13861 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,10ms, 12129 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,08ms, 10397 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,55ms, 8665 lines remaining.  ETA: 0h 0m 4s
+Resizing node table from 1000003 to 2000003
+Avg. time per line: 1,29ms, 6933 lines remaining.  ETA: 0h 0m 8s
+Start reordering
+Starting GC cycle  #55: 2000003 nodes / 1446409 free
+End reordering. Went from 1017531 to 552958 nodes, gain = 45% (9.276 sec)
+Avg. time per line: 2,03ms, 5201 lines remaining.  ETA: 0h 0m 10s
+Avg. time per line: 1,77ms, 3469 lines remaining.  ETA: 0h 0m 6s
+Avg. time per line: 1,62ms, 1737 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 1,52ms, 5 lines remaining.  ETA: 0h 0m 0s
+Found 0 matching assignments.
