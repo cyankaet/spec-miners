@@ -1,0 +1,13 @@
+Warning: start and accepting states of pattern "(a+b*c+)?" overlap. This may cause a significant number of unintuitive matches against the empty string.  Consider using a "+"-closed version of the pattern instead.
+Warning: pattern "(a+b*c+)?" accepts at least one string [""] that does not contain all of its letters.  Consider rewriting the property to meet this constraint to avoid spurious matches.
+Avg. time per line: 0,29ms, 14478 lines remaining.  ETA: 0h 0m 4s
+Avg. time per line: 0,15ms, 12870 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,11ms, 11262 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,08ms, 9654 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,25ms, 8046 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,79ms, 6438 lines remaining.  ETA: 0h 0m 5s
+Avg. time per line: 0,99ms, 4830 lines remaining.  ETA: 0h 0m 4s
+Avg. time per line: 1,07ms, 3222 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 1,00ms, 1614 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,93ms, 6 lines remaining.  ETA: 0h 0m 0s
+Found 0 matching assignments.

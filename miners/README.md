@@ -1,4 +1,4 @@
-# Mining specifications from BDDMiner, Javert, and DSM-Manual
+# Mining specifications from BDDMiner, Javert
 
 ## Preface
 
