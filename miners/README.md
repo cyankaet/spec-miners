@@ -41,15 +41,3 @@ bash javert.sh ${PROJECT_FILE}
 ```
 where PROJECT_FILE contains the url, sha, and name information for an open source project.
 Results of mining will be written to ws/javert/${PROJECT_NAME} where PROJECT_NAME is the name of the project.
-
-## Running DSM Manual
-
-The original intended use of DSM is to run with traces from automatically generated tests, but DSM Manual (as referred in the Temari paper) has DSM mine specifications using traces generated via the developer's unit tests.
-
-To run DSM Manual:
-```
-bash setup-conda.sh # If you do not have conda set up
-bash dsm-manual.sh ${PROJECT_FILE}
-```
-where PROJECT_FILE contains the url, sha, and name information for an open source project.
-Results of mining will be written to ws/dsm-manual/${PROJECT_NAME} where PROJECT_NAME is the name of the project.
