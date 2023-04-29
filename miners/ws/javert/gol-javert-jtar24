@@ -1,0 +1,172 @@
+Avg. time per line: 0,20ms, 15670 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,12ms, 13930 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,09ms, 12190 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,08ms, 10450 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,41ms, 8710 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,73ms, 6970 lines remaining.  ETA: 0h 0m 5s
+Avg. time per line: 0,78ms, 5230 lines remaining.  ETA: 0h 0m 4s
+Avg. time per line: 0,69ms, 3490 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,66ms, 1750 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,67ms, 10 lines remaining.  ETA: 0h 0m 0s
+--------------------------------------------------------------------------------
+Mined 17 Specifications:
+--------------------------------------------------------------------------------
+Specification 1:
+(
+  org.junit.runners.model.RunnerScheduler.schedule(Ljava/lang/Runnable;)V
+  org.junit.runners.ParentRunner.runChild(Ljava/lang/Object;Lorg/junit/runner/notification/RunNotifier;)V
+  org.junit.runners.BlockJUnit4ClassRunner.runLeaf(Lorg/junit/runners/model/Statement;Lorg/junit/runner/Description;Lorg/junit/runner/notification/RunNotifier;)V
+  (
+     java.util.regex.Matcher.find()Z
+   | java.util.regex.Matcher.group(I)Ljava/lang/String;
+   | java.util.regex.Pattern.matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+   | org.apache.maven.surefire.common.junit4.JUnit4RunListener.extractClassName(Lorg/junit/runner/Description;)Ljava/lang/String;
+   | org.junit.internal.runners.model.ReflectiveCallable.runReflectiveCall()Ljava/lang/Object;
+   | org.junit.runner.Description.getDisplayName()Ljava/lang/String;
+   | org.junit.runner.notification.RunListener.testFinished(Lorg/junit/runner/Description;)V
+   | org.junit.runner.notification.RunListener.testStarted(Lorg/junit/runner/Description;)V
+   | org.junit.runners.model.FrameworkMethod$1.run()Ljava/lang/Object;
+   | org.junit.runners.model.FrameworkMethod.invokeExplosively(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+  )*
+  java.util.concurrent.atomic.AtomicInteger.getAndIncrement()I
+)*
+
+--------------------------------------------------------------------------------
+Specification 2:
+(
+  java.util.Enumeration.hasMoreElements()Z
+  java.util.Enumeration.nextElement()Ljava/lang/Object;
+  org.apache.maven.surefire.booter.ForkingRunListener.toPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;B)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+  (
+     java.io.Writer.write(I)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;Ljava/lang/String;)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+   | org.apache.maven.surefire.booter.ForkingRunListener.comma(Ljava/lang/StringBuffer;)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/String;)Ljava/lang/String;
+  )*
+  java.io.PrintStream.print(Ljava/lang/String;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 3:
+(
+  org.kamranzafar.jtar.TarEntry.parseTarHeader([B)V
+  (
+     org.kamranzafar.jtar.TarInputStream.read([B)I
+  )*
+  java.io.BufferedOutputStream.close()V
+  org.kamranzafar.jtar.TarInputStream.skipPad()V
+  org.kamranzafar.jtar.TarInputStream.skip(J)J
+)*
+
+--------------------------------------------------------------------------------
+Specification 4:
+(
+  java.util.Set.iterator()Ljava/util/Iterator;
+  (
+     java.util.Iterator.hasNext()Z
+   | java.util.Iterator.next()Ljava/lang/Object;
+  )*
+  java.util.Map.entrySet()Ljava/util/Set;
+)*
+
+--------------------------------------------------------------------------------
+Specification 5:
+(
+  java.io.File.exists()Z
+  (
+     java.util.Map$Entry.getKey()Ljava/lang/Object;
+   | java.util.Map$Entry.getValue()Ljava/lang/Object;
+  )*
+  org.kamranzafar.jtar.TarEntry.extractTarHeader(Ljava/lang/String;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 6:
+(
+  org.junit.runners.ParentRunner.describeChild(Ljava/lang/Object;)Lorg/junit/runner/Description;
+  org.junit.runners.BlockJUnit4ClassRunner.describeChild(Lorg/junit/runners/model/FrameworkMethod;)Lorg/junit/runner/Description;
+  java.util.concurrent.ConcurrentMap.get(Ljava/lang/Object;)Ljava/lang/Object;
+  java.util.Collection.add(Ljava/lang/Object;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 7:
+(
+  org.junit.runners.BlockJUnit4ClassRunner.testName(Lorg/junit/runners/model/FrameworkMethod;)Ljava/lang/String;
+  org.junit.runners.model.FrameworkMethod.getAnnotations()[Ljava/lang/annotation/Annotation;
+  java.util.concurrent.ConcurrentMap.putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 8:
+(
+  org.junit.runners.model.FrameworkMethod.isPublic()Z
+  org.junit.runners.model.FrameworkMember.getModifiers()I
+  org.junit.runners.model.FrameworkMember.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 9:
+(
+  java.util.Comparator.compare(Ljava/lang/Object;Ljava/lang/Object;)I
+  org.junit.internal.MethodSorter$2.compare(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)I
+)*
+
+--------------------------------------------------------------------------------
+Specification 10:
+(
+  java.io.FileInputStream.read([B)I
+  org.kamranzafar.jtar.TarEntry.getSize()J
+)*
+
+--------------------------------------------------------------------------------
+Specification 11:
+(
+  org.junit.runners.model.FrameworkMethod.validatePublicVoid(ZLjava/util/List;)V
+  org.junit.runners.model.FrameworkMethod.isStatic()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 12:
+(
+  org.kamranzafar.jtar.TarEntry.computeCheckSum([B)J
+  org.kamranzafar.jtar.TarOutputStream.pad()V
+)*
+
+--------------------------------------------------------------------------------
+Specification 13:
+(
+  org.junit.runners.model.FrameworkMember.isShadowedBy(Lorg/junit/runners/model/FrameworkMember;)Z
+  org.junit.runners.model.FrameworkMethod.isShadowedBy(Lorg/junit/runners/model/FrameworkMethod;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 14:
+(
+  org.junit.validator.AnnotationsValidator$AnnotatableValidator.validateAnnotatable(Lorg/junit/runners/model/Annotatable;)Ljava/util/List;
+  org.junit.runners.model.Annotatable.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 15:
+(
+  org.junit.runners.model.TestClass.collectAnnotatedMethodValues(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/Class;Lorg/junit/runners/model/MemberValueConsumer;)V
+  org.junit.runners.model.TestClass.collectAnnotatedFieldValues(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/Class;Lorg/junit/runners/model/MemberValueConsumer;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 16:
+(
+  java.io.PrintStream.println(Ljava/lang/String;)V
+  org.apache.maven.surefire.report.ConsoleOutputReceiver.writeTestOutput([BIIZ)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 17:
+(
+  java.util.Map.containsKey(Ljava/lang/Object;)Z
+  java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------

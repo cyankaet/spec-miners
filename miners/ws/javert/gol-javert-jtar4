@@ -1,0 +1,162 @@
+Avg. time per line: 0,24ms, 11946 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,14ms, 10619 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,10ms, 9292 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,08ms, 7965 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,07ms, 6638 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,17ms, 5311 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,40ms, 3984 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,42ms, 2657 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,43ms, 1330 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,43ms, 3 lines remaining.  ETA: 0h 0m 0s
+--------------------------------------------------------------------------------
+Mined 14 Specifications:
+--------------------------------------------------------------------------------
+Specification 1:
+(
+  org.apache.maven.surefire.booter.ForkingRunListener.toString(BLorg/apache/maven/surefire/report/ReportEntry;Ljava/lang/Integer;)Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getSourceName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getGroup()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getMessage()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getElapsed()Ljava/lang/Integer;
+  org.apache.maven.surefire.booter.ForkingRunListener.nullableEncoding(Ljava/lang/StringBuffer;Ljava/lang/Integer;)V
+  org.apache.maven.surefire.report.ReportEntry.getStackTraceWriter()Lorg/apache/maven/surefire/report/StackTraceWriter;
+  org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/StringBuffer;Lorg/apache/maven/surefire/report/StackTraceWriter;)V
+  org.junit.runner.notification.RunListener.testStarted(Lorg/junit/runner/Description;)V
+  org.apache.maven.surefire.common.junit4.JUnit4RunListener.createReportEntry(Lorg/junit/runner/Description;)Lorg/apache/maven/surefire/report/SimpleReportEntry;
+  org.apache.maven.surefire.common.junit4.JUnit4RunListener.extractClassName(Lorg/junit/runner/Description;)Ljava/lang/String;
+  java.util.regex.Pattern.matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+  java.util.regex.Matcher.find()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 2:
+(
+  java.util.Enumeration.hasMoreElements()Z
+  java.util.Enumeration.nextElement()Ljava/lang/Object;
+  org.apache.maven.surefire.booter.ForkingRunListener.toPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;B)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+  (
+     java.io.Writer.write(I)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;Ljava/lang/String;)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+   | org.apache.maven.surefire.booter.ForkingRunListener.comma(Ljava/lang/StringBuffer;)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/String;)Ljava/lang/String;
+  )*
+  java.io.PrintStream.print(Ljava/lang/String;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 3:
+(
+  org.junit.runner.notification.RunNotifier$3.run()V
+  org.junit.runners.BlockJUnit4ClassRunner.createTest()Ljava/lang/Object;
+  org.junit.runners.BlockJUnit4ClassRunner.withPotentialTimeout(Lorg/junit/runners/model/FrameworkMethod;Ljava/lang/Object;Lorg/junit/runners/model/Statement;)Lorg/junit/runners/model/Statement;
+  org.junit.runners.BlockJUnit4ClassRunner.withBefores(Lorg/junit/runners/model/FrameworkMethod;Ljava/lang/Object;Lorg/junit/runners/model/Statement;)Lorg/junit/runners/model/Statement;
+  org.junit.runners.BlockJUnit4ClassRunner.withAfters(Lorg/junit/runners/model/FrameworkMethod;Ljava/lang/Object;Lorg/junit/runners/model/Statement;)Lorg/junit/runners/model/Statement;
+  (
+     org.junit.runners.model.FrameworkMethod$1.run()Ljava/lang/Object;
+   | org.junit.runners.model.FrameworkMethod.invokeExplosively(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+  )*
+  org.junit.runner.notification.RunNotifier.fireTestFinished(Lorg/junit/runner/Description;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 4:
+(
+  org.kamranzafar.jtar.TarEntry.extractTarHeader(Ljava/lang/String;)V
+  (
+     java.util.Map$Entry.getKey()Ljava/lang/Object;
+   | java.util.Map$Entry.getValue()Ljava/lang/Object;
+  )*
+  java.io.File.length()J
+  java.io.File.lastModified()J
+  org.kamranzafar.jtar.TarOutputStream.putNextEntry(Lorg/kamranzafar/jtar/TarEntry;)V
+  org.kamranzafar.jtar.TarEntry.computeCheckSum([B)J
+)*
+
+--------------------------------------------------------------------------------
+Specification 5:
+(
+  org.kamranzafar.jtar.TarEntry.parseTarHeader([B)V
+  (
+     org.kamranzafar.jtar.TarInputStream.read([B)I
+  )*
+  java.io.BufferedOutputStream.close()V
+  org.kamranzafar.jtar.TarInputStream.skipPad()V
+  org.kamranzafar.jtar.TarInputStream.skip(J)J
+)*
+
+--------------------------------------------------------------------------------
+Specification 6:
+(
+  java.io.PrintStream.println(Ljava/lang/String;)V
+  org.apache.maven.surefire.report.ConsoleOutputReceiver.writeTestOutput([BIIZ)V
+  (
+     java.io.PrintStream.write([BII)V
+  )*
+  java.io.BufferedOutputStream.flush()V
+)*
+
+--------------------------------------------------------------------------------
+Specification 7:
+(
+  org.junit.runners.ParentRunner.describeChild(Ljava/lang/Object;)Lorg/junit/runner/Description;
+  org.junit.runners.BlockJUnit4ClassRunner.describeChild(Lorg/junit/runners/model/FrameworkMethod;)Lorg/junit/runner/Description;
+  org.junit.runners.BlockJUnit4ClassRunner.testName(Lorg/junit/runners/model/FrameworkMethod;)Ljava/lang/String;
+  org.junit.runners.model.FrameworkMethod.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 8:
+(
+  org.junit.runners.ParentRunner.shouldRun(Ljava/lang/Object;)Z
+  org.junit.runners.ParentRunner.filterChild(Ljava/lang/Object;)V
+  org.junit.runners.ParentRunner.sortChild(Ljava/lang/Object;)V
+  org.junit.runner.manipulation.Sorter.apply(Ljava/lang/Object;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 9:
+(
+  org.junit.runner.manipulation.Sorter.compare(Lorg/junit/runner/Description;Lorg/junit/runner/Description;)I
+  java.util.Comparator.compare(Ljava/lang/Object;Ljava/lang/Object;)I
+  org.junit.runner.manipulation.Sorter$1.compare(Lorg/junit/runner/Description;Lorg/junit/runner/Description;)I
+)*
+
+--------------------------------------------------------------------------------
+Specification 10:
+(
+  org.junit.runners.model.TestClass.getAnnotatedMembers(Ljava/util/Map;Ljava/lang/Class;)Ljava/util/List;
+  java.util.Map.containsKey(Ljava/lang/Object;)Z
+  java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 11:
+(
+  org.junit.runners.model.TestClass.addToAnnotationLists(Lorg/junit/runners/model/FrameworkMember;Ljava/util/Map;)V
+  org.junit.runners.model.FrameworkMember.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 12:
+(
+  java.io.File.isDirectory()Z
+  java.io.FileInputStream.read([B)I
+)*
+
+--------------------------------------------------------------------------------
+Specification 13:
+(
+  org.junit.runners.model.FrameworkMember.isShadowedBy(Lorg/junit/runners/model/FrameworkMember;)Z
+  org.junit.runners.model.FrameworkMethod.isShadowedBy(Lorg/junit/runners/model/FrameworkMethod;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 14:
+(
+  org.junit.runners.model.FrameworkMember.isShadowedBy(Ljava/util/List;)Z
+  org.junit.runners.model.TestClass.runsTopToBottom(Ljava/lang/Class;)Z
+)*
+
+--------------------------------------------------------------------------------

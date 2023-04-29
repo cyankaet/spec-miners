@@ -1,0 +1,85 @@
+Avg. time per line: 0,17ms, 18945 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,10ms, 16841 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,08ms, 14737 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,23ms, 12633 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,20ms, 10529 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,21ms, 8425 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,20ms, 6321 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,18ms, 4217 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,17ms, 2113 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,17ms, 9 lines remaining.  ETA: 0h 0m 0s
+--------------------------------------------------------------------------------
+Mined 7 Specifications:
+--------------------------------------------------------------------------------
+Specification 1:
+(
+  java.util.Enumeration.hasMoreElements()Z
+  java.util.Enumeration.nextElement()Ljava/lang/Object;
+  org.apache.maven.surefire.booter.ForkingRunListener.toPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;B)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+  (
+     java.io.Writer.write(I)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;Ljava/lang/String;)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+   | org.apache.maven.surefire.booter.ForkingRunListener.comma(Ljava/lang/StringBuffer;)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/String;)Ljava/lang/String;
+  )*
+  java.io.PrintStream.print(Ljava/lang/String;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 2:
+(
+  org.apache.maven.surefire.booter.ForkingRunListener.toString(BLorg/apache/maven/surefire/report/ReportEntry;Ljava/lang/Integer;)Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getSourceName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getGroup()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getMessage()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getStackTraceWriter()Lorg/apache/maven/surefire/report/StackTraceWriter;
+  org.junit.runner.notification.RunListener.testStarted(Lorg/junit/runner/Description;)V
+  java.util.regex.Pattern.matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+  java.util.regex.Matcher.find()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 3:
+(
+  org.junit.runners.ParentRunner.describeChild(Ljava/lang/Object;)Lorg/junit/runner/Description;
+  org.junit.runners.BlockJUnit4ClassRunner.describeChild(Lorg/junit/runners/model/FrameworkMethod;)Lorg/junit/runner/Description;
+  org.junit.runners.BlockJUnit4ClassRunner.testName(Lorg/junit/runners/model/FrameworkMethod;)Ljava/lang/String;
+  org.junit.runners.model.FrameworkMethod.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 4:
+(
+  org.apache.maven.surefire.common.junit4.JUnit4RunListener.extractClassName(Lorg/junit/runner/Description;)Ljava/lang/String;
+  (
+     org.junit.runner.Description.getDisplayName()Ljava/lang/String;
+  )*
+  org.junit.runner.notification.RunListener.testFailure(Lorg/junit/runner/notification/Failure;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 5:
+(
+  org.junit.runners.model.TestClass.getAnnotatedMembers(Ljava/util/Map;Ljava/lang/Class;)Ljava/util/List;
+  java.util.Map.containsKey(Ljava/lang/Object;)Z
+  java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 6:
+(
+  java.util.Iterator.hasNext()Z
+  java.util.Iterator.next()Ljava/lang/Object;
+  java.util.Properties.getProperty(Ljava/lang/String;)Ljava/lang/String;
+)*
+
+--------------------------------------------------------------------------------
+Specification 7:
+(
+  org.junit.runners.model.TestClass.addToAnnotationLists(Lorg/junit/runners/model/FrameworkMember;Ljava/util/Map;)V
+  org.junit.runners.model.FrameworkMember.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------

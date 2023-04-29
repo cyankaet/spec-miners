@@ -1,0 +1,177 @@
+Avg. time per line: 0,22ms, 15670 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,13ms, 13930 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,10ms, 12190 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,08ms, 10450 lines remaining.  ETA: 0h 0m 0s
+Avg. time per line: 0,37ms, 8710 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,71ms, 6970 lines remaining.  ETA: 0h 0m 4s
+Avg. time per line: 0,76ms, 5230 lines remaining.  ETA: 0h 0m 3s
+Avg. time per line: 0,67ms, 3490 lines remaining.  ETA: 0h 0m 2s
+Avg. time per line: 0,65ms, 1750 lines remaining.  ETA: 0h 0m 1s
+Avg. time per line: 0,67ms, 10 lines remaining.  ETA: 0h 0m 0s
+--------------------------------------------------------------------------------
+Mined 18 Specifications:
+--------------------------------------------------------------------------------
+Specification 1:
+(
+  org.apache.maven.surefire.booter.ForkingRunListener.toString(BLorg/apache/maven/surefire/report/ReportEntry;Ljava/lang/Integer;)Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getSourceName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getName()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getGroup()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getMessage()Ljava/lang/String;
+  org.apache.maven.surefire.report.ReportEntry.getElapsed()Ljava/lang/Integer;
+  org.apache.maven.surefire.booter.ForkingRunListener.nullableEncoding(Ljava/lang/StringBuffer;Ljava/lang/Integer;)V
+  org.apache.maven.surefire.report.ReportEntry.getStackTraceWriter()Lorg/apache/maven/surefire/report/StackTraceWriter;
+  org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/StringBuffer;Lorg/apache/maven/surefire/report/StackTraceWriter;)V
+  java.util.regex.Pattern.matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+  java.util.regex.Matcher.find()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 2:
+(
+  org.junit.runners.ParentRunner.runChild(Ljava/lang/Object;Lorg/junit/runner/notification/RunNotifier;)V
+  org.junit.runners.BlockJUnit4ClassRunner.runChild(Lorg/junit/runners/model/FrameworkMethod;Lorg/junit/runner/notification/RunNotifier;)V
+  org.junit.runners.BlockJUnit4ClassRunner.runLeaf(Lorg/junit/runners/model/Statement;Lorg/junit/runner/Description;Lorg/junit/runner/notification/RunNotifier;)V
+  (
+     org.junit.runner.notification.RunListener.testStarted(Lorg/junit/runner/Description;)V
+  )*
+  org.junit.Test.expected()Ljava/lang/Class;
+  org.junit.runners.BlockJUnit4ClassRunner.getTimeout(Lorg/junit/Test;)J
+  org.junit.Test.timeout()J
+  (
+     org.junit.runners.model.FrameworkMethod$1.run()Ljava/lang/Object;
+   | org.junit.runners.model.FrameworkMethod.invokeExplosively(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+  )*
+  org.junit.runner.notification.RunNotifier$9.run()V
+)*
+
+--------------------------------------------------------------------------------
+Specification 3:
+(
+  java.util.Enumeration.hasMoreElements()Z
+  java.util.Enumeration.nextElement()Ljava/lang/Object;
+  org.apache.maven.surefire.booter.ForkingRunListener.toPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;B)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+  (
+     java.io.Writer.write(I)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.append(Ljava/lang/StringBuffer;Ljava/lang/String;)Lorg/apache/maven/surefire/booter/ForkingRunListener;
+   | org.apache.maven.surefire.booter.ForkingRunListener.comma(Ljava/lang/StringBuffer;)V
+   | org.apache.maven.surefire.booter.ForkingRunListener.encode(Ljava/lang/String;)Ljava/lang/String;
+  )*
+  java.io.PrintStream.print(Ljava/lang/String;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 4:
+(
+  java.io.BufferedOutputStream.write([BII)V
+  java.io.BufferedOutputStream.close()V
+  org.kamranzafar.jtar.TarInputStream.skipPad()V
+  org.kamranzafar.jtar.TarInputStream.skip(J)J
+)*
+
+--------------------------------------------------------------------------------
+Specification 5:
+(
+  org.junit.runners.BlockJUnit4ClassRunner.describeChild(Lorg/junit/runners/model/FrameworkMethod;)Lorg/junit/runner/Description;
+  java.util.concurrent.ConcurrentMap.get(Ljava/lang/Object;)Ljava/lang/Object;
+  org.junit.runner.Description.addChild(Lorg/junit/runner/Description;)V
+  java.util.Collection.add(Ljava/lang/Object;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 6:
+(
+  java.io.PrintStream.println(Ljava/lang/String;)V
+  org.apache.maven.surefire.report.ConsoleOutputReceiver.writeTestOutput([BIIZ)V
+  java.io.BufferedOutputStream.flush()V
+)*
+
+--------------------------------------------------------------------------------
+Specification 7:
+(
+  org.kamranzafar.jtar.TarEntry.extractTarHeader(Ljava/lang/String;)V
+  java.io.File.toPath()Ljava/nio/file/Path;
+  org.kamranzafar.jtar.TarEntry.writeEntryHeader([B)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 8:
+(
+  org.junit.runners.model.FrameworkMethod.isPublic()Z
+  org.junit.runners.model.FrameworkMember.getModifiers()I
+  org.junit.runners.model.FrameworkMember.getAnnotations()[Ljava/lang/annotation/Annotation;
+)*
+
+--------------------------------------------------------------------------------
+Specification 9:
+(
+  java.util.Iterator.hasNext()Z
+  java.util.Iterator.next()Ljava/lang/Object;
+  java.util.Properties.getProperty(Ljava/lang/String;)Ljava/lang/String;
+)*
+
+--------------------------------------------------------------------------------
+Specification 10:
+(
+  org.junit.runners.model.TestClass.collectAnnotatedMethodValues(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/Class;Lorg/junit/runners/model/MemberValueConsumer;)V
+  org.junit.runners.model.TestClass.collectAnnotatedFieldValues(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/Class;Lorg/junit/runners/model/MemberValueConsumer;)V
+)*
+
+--------------------------------------------------------------------------------
+Specification 11:
+(
+  org.junit.runners.model.FrameworkMethod.validatePublicVoid(ZLjava/util/List;)V
+  org.junit.runners.model.FrameworkMethod.isStatic()Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 12:
+(
+  java.util.Set.iterator()Ljava/util/Iterator;
+  java.util.Map.entrySet()Ljava/util/Set;
+)*
+
+--------------------------------------------------------------------------------
+Specification 13:
+(
+  java.io.File.isDirectory()Z
+  java.io.FileInputStream.read([B)I
+)*
+
+--------------------------------------------------------------------------------
+Specification 14:
+(
+  java.io.OutputStreamWriter.write(Ljava/lang/String;)V
+  java.io.OutputStreamWriter.close()V
+)*
+
+--------------------------------------------------------------------------------
+Specification 15:
+(
+  org.junit.runners.model.FrameworkMember.isShadowedBy(Lorg/junit/runners/model/FrameworkMember;)Z
+  org.junit.runners.model.FrameworkMethod.isShadowedBy(Lorg/junit/runners/model/FrameworkMethod;)Z
+)*
+
+--------------------------------------------------------------------------------
+Specification 16:
+(
+  java.util.Comparator.compare(Ljava/lang/Object;Ljava/lang/Object;)I
+  org.junit.internal.MethodSorter$2.compare(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)I
+)*
+
+--------------------------------------------------------------------------------
+Specification 17:
+(
+  java.util.Map.containsKey(Ljava/lang/Object;)Z
+  java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;
+)*
+
+--------------------------------------------------------------------------------
+Specification 18:
+(
+  org.kamranzafar.jtar.TarInputStream.getNextEntry()Lorg/kamranzafar/jtar/TarEntry;
+  org.kamranzafar.jtar.TarInputStream.closeCurrentEntry()V
+)*
+
+--------------------------------------------------------------------------------
