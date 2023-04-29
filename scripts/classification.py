@@ -20,6 +20,14 @@ spec_table = [{"persistent": None},
 			  {"intermittent": None},
 			  {"disappearing": None}]
 
+''' BDD file analysis'''
+def bdd_filter(file):
+	with open(file, "r") as f:
+		for line in f:
+			if ("Pattern:"  or "a=" or "b=" or "c=") not in line:
+				break
+		for line in f:
+			yield line
 
 '''Control flow for each miner'''
 def bdd_analysis():
@@ -39,7 +47,8 @@ def bdd_analysis():
 			b_table['BDD'][repo] = spec_table
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
-			f = open(f'{specs_loc}/{s}', 'r')
+			for line in bdd_filter(f'{specs_loc}/{s}'):
+				return None
 	print(b_table)
 	return b_table
 
