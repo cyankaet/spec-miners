@@ -12,7 +12,7 @@ log = subprocess.run(
 shas = list(reduce(lambda a, s: a + s.split('\t'),
 			log.stdout.split('\n')[:-1], []))[::2]
 
-sha_file = open(f"{base_name}-sha.txt", "w+")
+sha_file = open(f"../miners/repos/{base_name}-sha.txt", "w+")
 for i in range(31):
 	sha_file.write(f"{git_url} {shas[i]} {base_name + str(i)}\n")
 
