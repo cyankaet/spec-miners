@@ -9,36 +9,52 @@ import os
 import re
 import random
 
+
 '''Lookup table for each spec and its respective miner'''
 b_table = {'BDD': None}
 j_table = {'Javert': None}
 t_table = {'Texada': None}
 d_dable = {'Dice': None}
 
-'''Control flow for each miner'''
-miner_dir = input(
-	"Please specify the miner specs you wish to classify (b/j/t/d): ")
+spec_table = [{"persistent": None},
+			  {"intermittent": None},
+			  {"disappearing": None}]
 
-if (miner_dir.lower() == "b"):
+
+'''Control flow for each miner'''
+def bdd_analysis():
 	'''Setup initial table value for BDD'''
 	specs_dirs = f'../miners/ws/bdd-3'
-  # Get base name for the repository, this can be random
-	repo = re.sub(r'[0-9]', '', random.choice(os.listdir(specs_dirs)))
+	# Get base name for the repository, this repo can be chosen randomly
+	repo = re.sub(
+		r'[0-9]', '', random.choice(os.listdir(specs_dirs)))
 	b_table['BDD'] = {repo: None}
-	b_table['BDD'][repo] = [{"persistent": None},
-								 {"intermittent": None},
-								 {"disappearing": None}]
-	# commit = 0
+	b_table['BDD'][repo] = spec_table
 	for specs_d in os.listdir(specs_dirs):
+		pattern = re.sub(r'[0-9]', '', specs_d)
+		if (repo == pattern):
+			pass
+		else:
+			repo = pattern
+			b_table['BDD'][repo] = spec_table
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			f = open(f'{specs_loc}/{s}', 'r')
+	print(b_table)
+	return b_table
 
-			# keep track of files for debugging
-			# commit += 1
-			# if(commit % 3 == 0):
-			#   print('---')
-			# else:
-			#   print(s)
-elif (miner_dir.lower() == "j"):
-	print("")
+def javert_analysis():
+	return None
+
+def texada_analysis():
+	return None
+
+def dice_analysis():
+	return None
+
+
+'''Output each table with categorized data'''
+bdd_analysis()
+javert_analysis()
+texada_analysis()
+dice_analysis()
