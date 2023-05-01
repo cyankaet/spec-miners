@@ -24,14 +24,14 @@ spec_table = [{"persistent": None},
 
 
 def bdd_filter(file):
-	a = []
+	spec = []
 	with open(file, "r") as f:
 		for line in f:
 			if ("Pattern:" in line):
-				a.append([line.strip()])
+				spec.append([line.strip()])
 			elif ("a = " in line) or ("b = " in line) or ("c = " in line):
-				a[-1].append(line.strip())
-	return a
+				spec[-1].append(line.strip())
+	return spec
 
 
 '''Control flow for each miner'''
@@ -55,11 +55,10 @@ def bdd_analysis():
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			for line in bdd_filter(f'{specs_loc}/{s}'):
-				with open("output.txt", "a") as f:
-					print(line, file=f)
-				regex = line
-				if "Pattern:" in line:
-					pat = re.sub("Pattern: ", '', regex)
+				pass
+					# b_table['BDD'][repo][0] = "test"
+					# with open("output.txt", "a") as f:
+					# 	print(line, file=f)
 	print(b_table)
 	return b_table
 
