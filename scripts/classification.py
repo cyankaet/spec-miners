@@ -56,14 +56,6 @@ def bdd_analysis():
 				regex = line
 				if "Pattern:" in line:
 					pat = re.sub("Pattern: ", '', regex)
-				if "a = " in line:
-					pat_a = re.sub("a = ", '', regex)
-				if "b = " in line:
-					pat_b = re.sub("b = ", '', regex)
-				if "c = " in line:
-					pat_c = re.sub("c = ", '', regex)
-					special_pat = pat+pat_a+pat_b+pat_c
-					print(special_pat)
 	print(b_table)
 	return b_table
 
