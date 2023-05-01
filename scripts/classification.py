@@ -24,10 +24,14 @@ spec_table = [{"persistent": None},
 
 
 def bdd_filter(file):
+	a = []
 	with open(file, "r") as f:
 		for line in f:
-			if ("Pattern:" in line) or ("a = " in line) or ("b = " in line) or ("c = " in line):
-				yield line
+			if ("Pattern:" in line):
+				a.append([line.strip()])
+			elif ("a = " in line) or ("b = " in line) or ("c = " in line):
+				a[-1].append(line.strip())
+	return a
 
 
 '''Control flow for each miner'''
