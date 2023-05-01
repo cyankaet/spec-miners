@@ -17,8 +17,8 @@ t_table = {'Texada': None}
 d_dable = {'Dice': None}
 
 spec_table = [{"persistent": None},
-			  {"intermittent": None},
-			  {"disappearing": None}]
+				{"intermittent": None},
+				{"disappearing": None}]
 
 ''' BDD file analysis'''
 
@@ -26,10 +26,8 @@ spec_table = [{"persistent": None},
 def bdd_filter(file):
 	with open(file, "r") as f:
 		for line in f:
-			if ("Pattern:" or "a =" or "b =" or "c =") not in line:
-				break
-		for line in f:
-			yield line
+			if ("Pattern:" in line) or ("a = " in line) or ("b = " in line) or ("c = " in line):
+				yield line
 
 
 '''Control flow for each miner'''
@@ -53,6 +51,8 @@ def bdd_analysis():
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			for line in bdd_filter(f'{specs_loc}/{s}'):
+				with open("output.txt", "a") as f:
+					print(line, file=f)
 				regex = line
 				if "Pattern:" in line:
 					pat = re.sub("Pattern: ", '', regex)
