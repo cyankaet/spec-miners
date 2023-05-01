@@ -8,7 +8,7 @@ Disappearing, the specification appears at a single stage and disappears for the
 import os
 import re
 import random
-
+from pathlib import Path
 
 '''Lookup table for each spec and its respective miner'''
 b_table = {'BDD': None}
@@ -25,10 +25,12 @@ spec_table = [{"persistent": None},
 
 def bdd_filter(file):
 	spec = []
+	filename = os.path.dirname(file).split("/")[-1]
 	with open(file, "r") as f:
 		for line in f:
 			if ("Pattern:" in line):
 				spec.append([line.strip()])
+				spec[-1].append(filename)
 			elif ("a = " in line) or ("b = " in line) or ("c = " in line):
 				spec[-1].append(line.strip())
 	return spec
@@ -55,8 +57,13 @@ def bdd_analysis():
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			for line in bdd_filter(f'{specs_loc}/{s}'):
-				pass
-					# b_table['BDD'][repo][0] = "test"
+				filename = line[1]
+				basename = re.sub(r'[0-9]','', filename)
+				mined_spec = line.remove(filename)
+				# if b_table['BDD'][basename]['persistent'] == None:
+				# 	b_table['BDD'][basename]['persistent'] = mined_spec
+				# elif b_table['BDD'][basename]['persistent'] != mined_spec:
+				# 	b_table['BDD']
 					# with open("output.txt", "a") as f:
 					# 	print(line, file=f)
 	print(b_table)
