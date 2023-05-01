@@ -60,6 +60,7 @@ def bdd_analysis():
 				filename = line[1]
 				basename = re.sub(r'[0-9]','', filename)
 				mined_spec = line.remove(filename)
+				# TODO: Finish classification logic
 				# if b_table['BDD'][basename]['persistent'] == None:
 				# 	b_table['BDD'][basename]['persistent'] = mined_spec
 				# elif b_table['BDD'][basename]['persistent'] != mined_spec:
