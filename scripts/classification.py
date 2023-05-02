@@ -56,18 +56,14 @@ def bdd_analysis():
 			b_table['BDD'][repo] = spec_table
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
-			for line in bdd_filter(f'{specs_loc}/{s}'):
+			filt = bdd_filter(f'{specs_loc}/{s}')
+			for line in filt:
 				filename = line[1]
 				basename = re.sub(r'[0-9]','', filename)
 				mined_spec = line.remove(filename)
-				# TODO: Finish classification logic
-				# if b_table['BDD'][basename]['persistent'] == None:
-				# 	b_table['BDD'][basename]['persistent'] = mined_spec
-				# elif b_table['BDD'][basename]['persistent'] != mined_spec:
-				# 	b_table['BDD']
-					# with open("output.txt", "a") as f:
-					# 	print(line, file=f)
-	print(b_table)
+				alias = line
+				# for idx in enumerate(filt):
+				# 	alias.append(f'spec[SpecNum:{idx}][CommitNum:{idx}]')
 	return b_table
 
 
