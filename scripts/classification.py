@@ -38,33 +38,51 @@ def bdd_filter(file):
 
 '''Control flow for each miner'''
 
+def bdd_fractional_pred(full_number=52, partial_number = 40):
+		full_set = bdd_analysis(full_number, False)
+		persisent_full_set = {k for k,v in full_set.items() if len(v) >= full_number}
+		partial_set = bdd_analysis(partial_number, False)
+		persisent_partial_set = {k for k,v in partial_set.items() if len(v) >= partial_number}
+		successful_infers = {spec for spec in persisent_partial_set if spec in persisent_full_set}
+		print(f"successful infers: {len(successful_infers)}")
+		print(f"num of persistent specs at {partial_number} commits: {len(persisent_partial_set)}")
 
-def bdd_analysis():
+
+def bdd_analysis(num_commits, random):
 	'''Setup initial table value for BDD'''
 	specs_dirs = f'../miners/ws/bdd-3'
 	# Get base name for the repository, this repo can be chosen randomly
-	repo = re.sub(
-		r'[0-9]', '', random.choice(os.listdir(specs_dirs)))
-	b_table['BDD'] = {repo: None}
-	b_table['BDD'][repo] = spec_table
-	for specs_d in os.listdir(specs_dirs):
-		pattern = re.sub(r'[0-9]', '', specs_d)
-		if (repo == pattern):
-			pass
-		else:
-			repo = pattern
-			b_table['BDD'][repo] = spec_table
+	# repo = re.sub(
+	# 	r'[0-9]', '', random.choice(os.listdir(specs_dirs)))
+	# b_table['BDD'] = {repo: None}
+	# b_table['BDD'][repo] = spec_table
+	spec_presence = {}
+	selected_commits = os.listdir(specs_dirs)[:num_commits] \
+		if not random else random.sample(os.listdir(specs_dirs), num_commits) 
+	for specs_d in selected_commits:
+		# pattern = re.sub(r'[0-9]', '', specs_d)
+		# if (repo == pattern):
+		# 	pass
+		# else:
+		# 	repo = pattern
+		# 	b_table['BDD'][repo] = spec_table
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			filt = bdd_filter(f'{specs_loc}/{s}')
 			for line in filt:
 				filename = line[1]
-				basename = re.sub(r'[0-9]','', filename)
-				mined_spec = line.remove(filename)
-				alias = line
-				# for idx in enumerate(filt):
-				# 	alias.append(f'spec[SpecNum:{idx}][CommitNum:{idx}]')
-	return b_table
+				rel_commit_number = re.search(r'\d+', filename).group()
+				line.remove(filename)
+				string_spec = ' '.join(line)
+				if string_spec in spec_presence:
+					spec_presence[string_spec].append(rel_commit_number)
+				else:
+					spec_presence[string_spec] = [rel_commit_number]
+	# print(spec_presence)
+	persistent_specs = list(filter(lambda x: len(x) > 51, spec_presence.values()))
+	# print(reappearing_specs)
+	# print(len(reappearing_specs))
+	return spec_presence
 
 
 def javert_analysis():
@@ -80,7 +98,8 @@ def dice_analysis():
 
 
 '''Output each table with categorized data'''
-bdd_analysis()
+# bdd_analysis()
+bdd_fractional_pred()
 javert_analysis()
 texada_analysis()
 dice_analysis()
