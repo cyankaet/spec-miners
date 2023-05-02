@@ -2,3 +2,6 @@ shared/*/
 run-spec-miners/ws/*/
 */__pycache__/*
 run-spec-miners/temari-projects/*
+run-spec-miners/shared
+miners/project-traces/*
+miners/ws/*
