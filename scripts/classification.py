@@ -141,6 +141,10 @@ def dice_analysis():
 # bdd_analysis()
 # fractional_pred(bdd_analysis)
 # javert_analysis()
-fractional_pred(javert_analysis)
+for i in range(5, 50, 5):
+	fractional_pred(javert_analysis, partial_number=i)
+print("bdd analysis")
+for i in range(5, 50, 5):
+	fractional_pred(bdd_analysis, partial_number=i)
 texada_analysis()
 dice_analysis()
