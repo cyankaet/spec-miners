@@ -4,4 +4,6 @@ run-spec-miners/ws/*/
 run-spec-miners/temari-projects/*
 run-spec-miners/shared
 miners/project-traces/*
+!miners/project-traces/temp
 miners/ws/*
+!miners/ws/temp
