@@ -13,7 +13,7 @@ mkdir -p ${WORKDIR}
 
 PATTERNS=("(ab*c)*" "(a+b*c+)?" "(a+b*c+)*") # some three letter regex patterns
 
-bash ${SCRIPT_DIR}/obtain-traces.sh ${PROJECTS_FILE}
+bash ${SCRIPT_DIR}/new-obtain-traces.sh ${PROJECTS_FILE}
 
 while read url sha name; do
     (
