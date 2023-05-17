@@ -10,7 +10,7 @@ TRACES_DIR=${SCRIPT_DIR}/project-traces
 WORKDIR=${SCRIPT_DIR}/ws/javert
 mkdir -p ${WORKDIR}
 
-bash ${SCRIPT_DIR}/obtain-traces.sh ${PROJECTS_FILE}
+bash ${SCRIPT_DIR}/new-obtain-traces.sh ${PROJECTS_FILE}
 
 while read url sha name; do
     (
