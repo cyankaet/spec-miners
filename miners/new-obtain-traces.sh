@@ -65,6 +65,7 @@ while read url sha name; do
 			fi
 		else 
 			echo "=======================[ No evolutionary traces collected ]======================="
+			rm ../incremental_tests/*
 		fi
 		)
 	echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
