@@ -30,26 +30,29 @@ while read url sha name; do
 		# Get the tests that change for a given evolution
 		# !WARNING: ALWAYS MAKE SURE THE REPOSITORY IS CLEAN (mvn starts:clean)
 		export JDK_JAVA_OPTIONS=-Djdk.attach.allowAttachSelf=true
-		mvn starts:select > ../incremental_tests/tests_$name.txt
-		grep "INFO: org." ../incremental_tests/tests_$name.txt | sed 's/INFO: //g' > ../incremental_tests/parsedtests_$name.txt
+		mvn starts:select > ../incremental_tests/tests_${name}.txt
+		grep "INFO: org." ../incremental_tests/tests_${name}.txt | sed 's/INFO: //g' > ../incremental_tests/parsedtests_${name}.txt
 		mvn starts:run
 
 		# Run methodtracer to obtain traces from the diff set of tests
-		if [ -s ../incremental_tests/parsedtests_$name.txt ]; then 
-			INPUT=$(tr -s '\n ' ',' < parsedtests_jtar0.txt)
+		if [ -s ../incremental_tests/parsedtests_${name}.txt ]; then 
+			INPUT=$(tr -s '\n ' ',' < ../incremental_tests/parsedtests_${name}.txt)
 			INPUT_PARSED=${INPUT::-1}
-			echo $INPUT_PARSED
-			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=${INPUT_PARSED}"
+			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=*"
 			if [ ! -d traces ]; then 
 				mkdir traces 
 				cp -r traces ${out_dir}
+				rm -rf traces/*
+				echo "=======================[ The following evolutionary traces were collected: ${INPUT_PARSED} ]======================="
 			else (
 				cp -r traces ${out_dir}
+				rm -rf traces/*
+				echo "=======================[ The following evolutionary traces were collected: ${INPUT_PARSED} ]======================="
 			)
 			fi
 		else 
 			echo "=======================[ No evolutionary traces collected ]======================="
 		fi
 		)
-	echo "=======================[ [obtain-traces.sh] Traces from ${name} are written to ${out_dir} ]======================="
+	echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
 done < ${PROJECTS_FILE}
