@@ -38,16 +38,29 @@ while read url sha name; do
 		if [ -s ../incremental_tests/parsedtests_${name}.txt ]; then 
 			INPUT=$(tr -s '\n ' ',' < ../incremental_tests/parsedtests_${name}.txt)
 			INPUT_PARSED=${INPUT::-1}
+			# ! TODO: Exclude test classes that haven't changes (REMARK IN PAPER)
+			# ALL_TESTS=$(readarray -t a < ../incremental_tests/parsedtests_jtar0.txt)
+			# ALL_TESTS_PARSED=$(unset ${ALL_TESTS}[-1])
+			# for i in ${INPUT_PARSED//,/ }
+			# do
+    	# 	if [[ ! " ${ALL_TESTS_PARSED[@]} " =~ " ${i} " ]]; then 
+			# 		mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.exclude=${i}"
+			# 	else 
+			# 		mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=*"
+			# 	fi
+			# done
 			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=*"
 			if [ ! -d traces ]; then 
 				mkdir traces 
 				cp -r traces ${out_dir}
 				rm -rf traces/*
 				echo "=======================[ The following evolutionary traces were collected: ${INPUT_PARSED} ]======================="
+				rm ../incremental_tests/*
 			else (
 				cp -r traces ${out_dir}
 				rm -rf traces/*
 				echo "=======================[ The following evolutionary traces were collected: ${INPUT_PARSED} ]======================="
+				rm ../incremental_tests/*
 			)
 			fi
 		else 
