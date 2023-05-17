@@ -34,15 +34,22 @@ while read url sha name; do
 		grep "INFO: org." ../incremental_tests/tests_$name.txt | sed 's/INFO: //g' > ../incremental_tests/parsedtests_$name.txt
 		mvn starts:run
 
-		# TODO: Run methodtracer to obtain traces from the diff set of tests
-		mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=all-tests@trace.include=*;instrument.include=*"
-		if [ ! -d traces ]; then 
-			mkdir traces 
-			cp -r traces ${out_dir}
-		else (
-			cp -r traces ${out_dir}
+		# Run methodtracer to obtain traces from the diff set of tests
+		if [ -s ../incremental_tests/parsedtests_$name.txt ]; then 
+			INPUT=$(tr -s '\n ' ',' < parsedtests_jtar0.txt)
+			INPUT_PARSED=${INPUT::-1}
+			echo $INPUT_PARSED
+			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=${INPUT_PARSED}"
+			if [ ! -d traces ]; then 
+				mkdir traces 
+				cp -r traces ${out_dir}
+			else (
+				cp -r traces ${out_dir}
+			)
+			fi
+		else 
+			echo "=======================[ No evolutionary traces collected ]======================="
+		fi
 		)
-        fi
-	)
-	echo "[obtain-traces.sh] Traces from ${name} are written to ${out_dir}"
+	echo "=======================[ [obtain-traces.sh] Traces from ${name} are written to ${out_dir} ]======================="
 done < ${PROJECTS_FILE}
