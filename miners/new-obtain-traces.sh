@@ -49,7 +49,7 @@ while read url sha name; do
 			# 		mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=*"
 			# 	fi
 			# done
-			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=${INPUT_PARSED}@trace.include=*;instrument.include=*"
+			mvn test ${SKIPS} -DargLine="-javaagent:${SCRIPT_DIR}/methodtracer.jar=all-tests@trace.include=*;instrument.include=*"
 			if [ ! -d traces ]; then 
 				mkdir traces 
 				cp -r traces ${out_dir}
