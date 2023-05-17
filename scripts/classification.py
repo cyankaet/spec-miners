@@ -59,12 +59,12 @@ def javert_filter(file): # will need to count parens and append pattern
 
 def fractional_pred(analysis_func, full_number=52, partial_number = 40):
 	full_set = analysis_func(full_number, False)
-	persisent_full_set = {k for k,v in full_set.items() if len(v) >= full_number}
-	partial_set = analysis_func(partial_number, False)
-	persisent_partial_set = {k for k,v in partial_set.items() if len(v) >= partial_number}
-	successful_infers = {spec for spec in persisent_partial_set if spec in persisent_full_set}
-	print(f"successful infers: {len(successful_infers)}")
-	print(f"num of persistent specs at {partial_number} commits: {len(persisent_partial_set)}")
+	# persisent_full_set = {k for k,v in full_set.items() if len(v) >= full_number}
+	# partial_set = analysis_func(partial_number, False)
+	# persisent_partial_set = {k for k,v in partial_set.items() if len(v) >= partial_number}
+	# successful_infers = {spec for spec in persisent_partial_set if spec in persisent_full_set}
+	# print(f"successful infers: {len(successful_infers)}")
+	# print(f"num of persistent specs at {partial_number} commits: {len(persisent_partial_set)}")
 
 
 def bdd_analysis(num_commits, random):
@@ -88,6 +88,7 @@ def bdd_analysis(num_commits, random):
 		specs_loc = f'../miners/ws/bdd-3/{specs_d}'
 		for s in os.listdir(specs_loc):
 			filt = bdd_filter(f'{specs_loc}/{s}')
+			print(len(filt))
 			for line in filt:
 				filename = line[1]
 				rel_commit_number = re.search(r'\d+', filename).group()
@@ -141,10 +142,10 @@ def dice_analysis():
 # bdd_analysis()
 # fractional_pred(bdd_analysis)
 # javert_analysis()
-for i in range(5, 50, 5):
+for i in range(1, 10, 1):
 	fractional_pred(javert_analysis, partial_number=i)
 print("bdd analysis")
-for i in range(5, 50, 5):
-	fractional_pred(bdd_analysis, partial_number=i)
+# for i in range(1, 10, 1):
+fractional_pred(bdd_analysis, partial_number=i)
 texada_analysis()
 dice_analysis()

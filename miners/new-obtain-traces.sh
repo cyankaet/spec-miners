@@ -25,7 +25,7 @@ while read url sha name; do
 		cd ${WORKDIR}/${base_name}
 		# Checkout the working directory for an evolution 
 		# TODO: src might change depending on the repository (maybe just get all directories?)
-		git checkout ${sha} -- src/
+		git checkout ${sha} -- src 
 
 		# Get the tests that change for a given evolution
 		# !WARNING: ALWAYS MAKE SURE THE REPOSITORY IS CLEAN (mvn starts:clean)
